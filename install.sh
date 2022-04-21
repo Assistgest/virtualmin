@@ -523,14 +523,10 @@ EOF
 
 EOF
 
-  printf " Continue? (y/n) "
-  if ! yesno; then
-    exit
-  fi
 }
-if [ "$skipyesno" -ne 1 ] && [ -z "$setup_only" ]; then
-  install_msg
-fi
+
+install_msg
+
 
 already_installed_msg() {
   # Double check if installed, just in case above error ignored.
